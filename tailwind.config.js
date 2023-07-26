@@ -6,6 +6,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       backgroundImage: {
         'beauty_women': "url('assets/Back_ground.png')",

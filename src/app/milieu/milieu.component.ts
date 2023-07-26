@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddArticleComponent } from '../add-article/add-article.component';
 
 @Component({
   selector: 'app-milieu',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class MilieuComponent {
 
+  constructor(private _dialog:MatDialog){
+
+  }
+  Ajouter_au_panier(){
+    this._dialog.open(AddArticleComponent,{
+      height:"50%",
+      width:"50%"
+    })
+  }
 }
