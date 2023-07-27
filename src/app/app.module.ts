@@ -15,6 +15,8 @@ import { AddArticleComponent } from './add-article/add-article.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTabsModule} from '@angular/material/tabs';
+import { VerifierArticleComponent } from './verifier-article/verifier-article.component';
 
 
 
@@ -24,7 +26,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     HeaderComponent,
     MilieuComponent,
     FooterComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    VerifierArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatCardModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTabsModule
 
   ],
   providers: [],

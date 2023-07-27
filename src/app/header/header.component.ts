@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-
+  var_page="";
+  var_page_produits="page-active"
+  
 
 }

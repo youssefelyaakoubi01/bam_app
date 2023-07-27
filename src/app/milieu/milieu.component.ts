@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddArticleComponent } from '../add-article/add-article.component';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-milieu',
@@ -8,9 +9,9 @@ import { AddArticleComponent } from '../add-article/add-article.component';
   styleUrls: ['./milieu.component.css']
 })
 export class MilieuComponent {
-
-  constructor(private _dialog:MatDialog){
-
+  articles:any;
+  constructor(private _dialog:MatDialog, private article:ArticlesService){
+    this.articles = this.article.articles;
   }
   Ajouter_au_panier(){
     this._dialog.open(AddArticleComponent,{
@@ -18,4 +19,5 @@ export class MilieuComponent {
       width:"50%"
     })
   }
+  
 }
