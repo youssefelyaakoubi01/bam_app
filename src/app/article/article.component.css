@@ -1,8 +1,8 @@
 
 .image-container {
     overflow: hidden; /* Pour cacher le contenu débordant */
-    width: 700px; /* Ajustez cette valeur selon la taille désirée de la zone de l'image */
-    height: 600px; /* Ajustez cette valeur selon la taille désirée de la zone de l'image */
+    width: 300px; /* Ajustez cette valeur selon la taille désirée de la zone de l'image */
+    height: 200px; /* Ajustez cette valeur selon la taille désirée de la zone de l'image */
   }
   
   .image-container img {

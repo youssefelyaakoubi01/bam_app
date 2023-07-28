@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { AddArticleComponent } from '../add-article/add-article.component';
 import { ArticlesService } from '../services/articles.service';
+import { ArticleComponent } from '../article/article.component';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-milieu',
@@ -19,5 +20,16 @@ export class MilieuComponent {
       width:"50%"
     })
   }
+  Acheter(article:any){
+
+  }
+  openArticle(article_id: any) {
+    const dialogRef = this._dialog.open(ArticleComponent, {
+      height: "65%",
+      width: "30%",
+      data: { articleId: article_id } // Passer la valeur à ArticleComponent
+    });
+  }
+
   
 }

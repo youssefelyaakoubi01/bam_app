@@ -17,6 +17,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { VerifierArticleComponent } from './verifier-article/verifier-article.component';
+import { HomeComponent } from './home/home.component';
+import { ArticleComponent } from './article/article.component';
 
 
 
@@ -27,7 +29,9 @@ import { VerifierArticleComponent } from './verifier-article/verifier-article.co
     MilieuComponent,
     FooterComponent,
     AddArticleComponent,
-    VerifierArticleComponent
+    VerifierArticleComponent,
+    HomeComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
