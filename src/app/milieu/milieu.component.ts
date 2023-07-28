@@ -3,6 +3,8 @@ import { AddArticleComponent } from '../add-article/add-article.component';
 import { ArticlesService } from '../services/articles.service';
 import { ArticleComponent } from '../article/article.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-milieu',
@@ -11,7 +13,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 export class MilieuComponent {
   articles:any;
-  constructor(private _dialog:MatDialog, private article:ArticlesService){
+  constructor(private _dialog:MatDialog, private article:ArticlesService ,private _breakpointObserver: BreakpointObserver){
     this.articles = this.article.articles;
   }
   Ajouter_au_panier(){
@@ -24,12 +26,24 @@ export class MilieuComponent {
 
   }
   openArticle(article_id: any) {
+    let dialogHeight: string;
+    let dialogWidth: string;
+  
+    if (this._breakpointObserver.isMatched(Breakpoints.Handset)) {
+      dialogHeight = '100%';
+      dialogWidth = '100%';
+    } else {
+      dialogHeight = '65%';
+      dialogWidth = '30%';
+    }
+  
     const dialogRef = this._dialog.open(ArticleComponent, {
-      height: "65%",
-      width: "30%",
-      data: { articleId: article_id } // Passer la valeur à ArticleComponent
+      height: dialogHeight,
+      width: dialogWidth,
+      data: { articleId: article_id }
     });
   }
+  
 
   
 }
