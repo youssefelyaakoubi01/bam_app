@@ -19,6 +19,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { VerifierArticleComponent } from './verifier-article/verifier-article.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
+import { AngularFireModule } from '@angular/fire/compat'
 
 
 
@@ -44,7 +45,9 @@ import { ArticleComponent } from './article/article.component';
     MatDialogModule,
     MatFormFieldModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+  
+    
 
   ],
   providers: [],
