@@ -19,7 +19,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { VerifierArticleComponent } from './verifier-article/verifier-article.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
-import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireModule } from '@angular/fire/compat';
+import { ProduitsAlimentairesComponent } from './produits-alimentaires/produits-alimentaires.component';
+import { MenuProductsComponent } from './menu-products/menu-products.component';
+import { ProductsComponent } from './products/products.component'
 
 
 
@@ -32,7 +35,10 @@ import { AngularFireModule } from '@angular/fire/compat'
     AddArticleComponent,
     VerifierArticleComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    ProduitsAlimentairesComponent,
+    MenuProductsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
