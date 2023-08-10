@@ -14,10 +14,12 @@ const routes: Routes = [
   
 
   { path: 'home', component: HomeComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'all_products', component: MilieuComponent },
-  { path: 'produits_alimentaires', component: ProduitsAlimentairesComponent },
-  { path: ' ', redirectTo: 'home' },
+  { path: 'products', redirectTo: 'products/all_products', pathMatch: 'full' },
+  { path: 'products/all_products', component: MilieuComponent },
+  { path: 'products/produits_alimentaires', component: ProduitsAlimentairesComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  
+  
   
   // Autres routes ici...
 ];
